@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Voyage";
+  src: url("/fonts/voyage.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Higher specificity to override Tailwind */
+html .font-voyage,
+html .font-voyage *,
+.font-voyage {
+  font-family: "Voyage", "Arial Black", Arial, sans-serif !important;
+}
+
+html .header,
+.header,
+div.header {
+  font-family: "Voyage", "Arial Black", Arial, sans-serif !important;
+}
+
+html .text-item,
+.text-item,
+div.text-item {
+  font-family: "Voyage", "Arial Black", Arial, sans-serif !important;
+}
+
+/* Force all children too */
+.font-voyage *,
+.header *,
+.text-item * {
+  font-family: inherit !important;
+}
